@@ -1,0 +1,149 @@
+*{
+    margin:0px;
+    padding:0px;
+    color: rosybrown;
+    font-family: "Verdana", sans-serif;
+  }
+
+  #sidebar {
+    position:fixed;
+    width: 200px;
+    height:100%;
+    background: rgb(46, 52, 64);
+    left:-200px;
+    transition: 0.5s;
+  }
+  #sidebar.active{
+    left:0px;
+  }
+  #sidebar ul{
+    margin-top: 2cm;
+  }
+  #sidebar ul li{
+    top: 200px;
+    color:rgba(230,230,230, 0.9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  #sidebar ul li:hover{
+      color:rosybrown;
+  }
+
+  #sidebar .toggle-btn{
+    position:absolute;
+    left:220px;
+    top:20px;
+  }
+  #sidebar .toggle-btn span {
+    display:block;
+    width:27.5px;
+    height:4px;
+    background: rosybrown;
+    margin: 5px 0px;
+  }
+
+  #main {
+      position:absolute;
+      left: 200px;
+      top: 400px;
+      color:rosybrown;
+      transition: 0.5s;
+      animation: fadein 2s;
+  }
+
+  #main.active{
+      left:400px;
+  }
+
+  #name{
+    font-size: 32px;
+  }
+
+  #name span:hover{
+    font-size: 0;
+  }
+
+  #name span:hover:after{
+    content: attr(hover-name);
+    font-size: 32px;
+  }
+
+  #main a img{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    margin-right: 5px;
+    position: relative;
+  }
+
+  #main a img:hover{
+    opacity: 0.3;
+    transition: 0.2s;
+  }  
+
+  #main p{
+    padding-bottom: 7.5px;
+  }
+
+  #about{
+    display: none;
+    animation: fadein 2s;
+    position:absolute;
+    left: 200px;
+    top: 450px;
+    color:rosybrown;
+    transition: 0.5s;
+    font-size: large;
+  } 
+
+  #about.active{
+    left: 400px;
+  }
+
+  #about p{
+    position: relative;
+    left: 400px;
+    top: -100px;
+    padding-bottom: 5px;
+  }
+
+  #v1{
+    border-left: 6px solid rosybrown;
+    height: 500px;
+    position: absolute;
+    top: -200px;
+    left: 325px;
+  }
+
+
+  /*https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
