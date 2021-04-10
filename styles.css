@@ -4,7 +4,9 @@
     color: rosybrown;
     font-family: "Verdana", sans-serif;
   }
-
+  body{
+    background-color:rgb(36, 41, 51);
+  }
   #sidebar {
     position:fixed;
     width: 200px;
